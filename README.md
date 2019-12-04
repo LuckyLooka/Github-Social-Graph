@@ -5,6 +5,8 @@ Part 1 - Github Access:
 
 I used react to create a basic display of my own github data, using endpoints such as profile image,username, email etc.
 
+Use 'npm start' in terminal to run locally.
+
 ![Image1](/images/githubaccess1.png)
 
 I added number of followers, and the github api chart.
