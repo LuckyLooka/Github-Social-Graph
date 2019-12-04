@@ -25,7 +25,7 @@ import Moment from 'react-moment';const imgStye = {
         <div>
           {props.infoclean.blog ? <div><p>Blog:</p><p><a href={
              props.infoclean.blog.search("http") !== -1 ? props.infoclean.blog
-            : "http://" +  props.infoclean.blog } target="_blank">{props.infoclean.blog}</a></p></div> : null }
+            : "http://" +  props.infoclean.blog } rel="noopener noreferrer" target="_blank">{props.infoclean.blog}</a></p></div> : null }
         </div>
         <div>
           {props.infoclean.location ? <div><p>Location:</p><p>{props.infoclean.location}</p></div> : null }
@@ -43,13 +43,11 @@ import Moment from 'react-moment';const imgStye = {
           {props.infoclean.following ? <div><p>Following:</p><p>{props.infoclean.following}</p></div> : null }
         </div>
         <div>
-          {props.infoclean.html_url ? <div><p><a href={props.infoclean.html_url} target="_blank">View on GitHub</a></p></div> : null }
+          {props.infoclean.html_url ? <div><p><a href={props.infoclean.html_url} rel="noopener noreferrer" target="_blank">View on GitHub</a></p></div> : null }
         </div>
         <div>
           {props.infoclean.login ? <div>{ <img src={"http://ghchart.rshah.org/"+props.infoclean.login} alt="Github chart" />
-        }<br/><a href="https://ghchart.rshah.org/" target="_blank">Source for GitHub Chart API</a></div> : null }
+        }<br/><a href="https://ghchart.rshah.org/" rel="noopener noreferrer" target="_blank" >Source for GitHub Chart API</a></div> : null }
         </div>
       </div>
-    )};
-
-    export default ProfileDetails;
+    )};export default ProfileDetails;
