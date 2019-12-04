@@ -51,3 +51,5 @@ import Moment from 'react-moment';const imgStye = {
         </div>
       </div>
     )};
+
+    export default ProfileDetails;
