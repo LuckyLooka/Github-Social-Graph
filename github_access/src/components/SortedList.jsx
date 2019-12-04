@@ -4,16 +4,13 @@ import Moment from 'react-moment';const SortedList = (props) => {
     return (
         <ul>
           {props.repitems.map((repitem) =>
-            <li key={repitem.id}>
+            <li key={repitem.sha}>
               <div>
                 <div>
-                  <a href={repitem.html_url} target="_blank">{repitem.name}</a> || Started <Moment from={new Date()}>{repitem.created_at}</Moment>
+                  <a> Commit by "{repitem.commit.author.name}" at {repitem.commit.author.date}</a>
                 </div>
                 <div>
-                  <i>{repitem.description}</i>
-                </div>
-                <div>
-                 Language: {repitem.language} || Watchers: {repitem.watchers_count} || Forks: {repitem.forks_count}
+                  <i>Commit message :{repitem.commit.description}</i>
                 </div>
               </div>
             </li>
