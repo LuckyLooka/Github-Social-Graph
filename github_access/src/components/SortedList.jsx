@@ -1,5 +1,5 @@
 import React from 'react';
-import Moment from 'react-moment';const SortedList = (props) => {
+const SortedList = (props) => {
   if (props.repitems) {
     return (
         <ul>
@@ -7,10 +7,10 @@ import Moment from 'react-moment';const SortedList = (props) => {
             <li key={repitem.sha}>
               <div>
                 <div>
-                  <a> Commit by "{repitem.commit.author.name}" at {repitem.commit.author.date}</a>
+                   Commit by "{repitem.commit.author.name}" at {repitem.commit.author.date}
                 </div>
                 <div>
-                  <i>Commit message :{repitem.commit.description}</i>
+                  <i>Commit message :  {repitem.commit.message}</i>
                 </div>
               </div>
             </li>
